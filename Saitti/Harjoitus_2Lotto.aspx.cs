@@ -47,17 +47,17 @@ public partial class Saitti_Harjoitus_2Lotto : System.Web.UI.Page
                         lsbNumbers.Items.Add("Next lottery");
                     }
 
-                    Lotto lotto = new Lotto();
+                    Lotto lotto = new Lotto(ddlLottery.SelectedValue);
 
                     results = lotto.ArvoRivi();
-
-                    lblAlert.Text = results.Count.ToString();
 
                     for (int nro = 0; nro < results.Count; nro++)
                     {
                         lsbNumbers.Items.Add(results[nro].ToString());
                     }
                 }
+
+                lblAlert.Text = "...";
             }
         }
         catch (Exception er)
@@ -69,5 +69,6 @@ public partial class Saitti_Harjoitus_2Lotto : System.Web.UI.Page
     protected void Clear_Click(object sender, EventArgs e)
     {
         lsbNumbers.Items.Clear();
+        lblAlert.Text = "...";
     }
 }
