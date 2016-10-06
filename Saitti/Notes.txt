@@ -1,0 +1,7 @@
+﻿MySQL ADO.Net driver: https://www.nuget.org/packages/MySql.Data/
+
+NewtonSoft Json framework: http://www.newtonsoft.com/json
+
+--------------------------------------------------------------------------
+
+Kotitehtävä viikolle 4 on tehtävä 9 Esan sivulla

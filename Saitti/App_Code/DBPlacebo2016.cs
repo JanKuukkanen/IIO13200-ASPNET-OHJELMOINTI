@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using MySql.Data.MySqlClient;
 
 namespace JAMK.ICT.Data
 {
@@ -43,6 +44,32 @@ namespace JAMK.ICT.Data
             viesti = ex.Message;
             throw;
         }
+    }
+
+    public static DataTable GetCitysFromMysql(string cs)
+    {
+            try
+            {
+                //yhteys labranetin myslille ja palautetaan taulu City DataTablena
+                string sql = "SELECT name, countrycode, population FROM City WHERE population > 99999 ORDER BY population DESC";
+
+                using (MySqlConnection conn = new MySqlConnection(cs))
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                    {
+                        MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
     }
   }
 }

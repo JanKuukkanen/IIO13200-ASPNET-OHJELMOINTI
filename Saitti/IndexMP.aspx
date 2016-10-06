@@ -3,13 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <title>IIO13200 .NET Ohjelmointi</title>
     <link href="CSS/demo.css" rel="stylesheet" type="text/css" />
-    <style>
-        #logo
-        {
-            width:100%;
-            height:auto;
-        }
-    </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
