@@ -5,3 +5,8 @@ NewtonSoft Json framework: http://www.newtonsoft.com/json
 --------------------------------------------------------------------------
 
 Kotitehtävä viikolle 5 on tehtävä 9 Esan sivulla
+
+--------------------------------------------------------------------------
+
+Stuff.aspx: sqlDAtasource, gridview ja detailsview: selection methods
+
