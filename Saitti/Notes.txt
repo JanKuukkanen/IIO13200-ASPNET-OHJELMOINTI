@@ -10,3 +10,6 @@ Kotitehtävä viikolle 5 on tehtävä 9 Esan sivulla
 
 Stuff.aspx: sqlDAtasource, gridview ja detailsview: selection methods
 
+--------------------------------------------------------------------------
+
+LINQ samples: https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b
