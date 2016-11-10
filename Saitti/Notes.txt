@@ -13,3 +13,7 @@ Stuff.aspx: sqlDAtasource, gridview ja detailsview: selection methods
 --------------------------------------------------------------------------
 
 LINQ samples: https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b
+
+--------------------------------------------------------------------------
+
+Varmista että kaikki dll tiedostot ovat bin kansiossa kun kloonaat gitistä uudelle koneelle

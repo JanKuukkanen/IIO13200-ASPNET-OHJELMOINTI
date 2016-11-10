@@ -9,6 +9,11 @@
         <div class="w3-container w3-third">
             <asp:Button ID="btnGetCustomers" runat="server" Text="Hae asiakkaat" CssClass="w3-btn" OnClick="btnGetCustomers_Click" />
             <asp:DropDownList ID="ddlCustomers" runat="server" OnSelectedIndexChanged="ddlCustomers_SelectedIndexChanged" AutoPostBack="True" />
+            <p>Etunimi: <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox></p>
+            <p>Sukunimi: <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox></p>
+            <asp:Button ID="btnCreateCustomer" runat="server" Text="Luo uusi" CssClass="w3-btn" OnClick="btnCreateCustomer_Click" />
+            <asp:Button ID="btnSaveCustomer" runat="server" Text="Tallenna" CssClass="w3-btn" OnClick="btnSaveCustomer_Click" />
+            <asp:Button ID="btnDeleteCustomer" runat="server" Text="Poista" CssClass="w3-btn" OnClick="btnDeleteCustomer_Click" />
             <asp:GridView ID="gvCustomers" runat="server" />
         </div>
 
