@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DemoxOyModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="DemoxOyModelStoreContainer">
+          <EntitySet Name="asiakas" EntityType="DemoxOyModel.Store.asiakas" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="asiakas">
+          <Key>
+            <PropertyRef Name="astunnus" />
+          </Key>
+          <Property Name="astunnus" Type="char" Nullable="false" MaxLength="6" />
+          <Property Name="asnimi" Type="char" Nullable="false" MaxLength="30" />
+          <Property Name="yhteyshlo" Type="char" MaxLength="32" />
+          <Property Name="maa" Type="char" MaxLength="3" />
+          <Property Name="postinro" Type="char" MaxLength="5" />
+          <Property Name="postitmp" Type="char" MaxLength="16" />
+          <Property Name="ostot" Type="float" />
+          <Property Name="asvuosi" Type="smallint" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DemoxOyModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DemoxOyEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="asiakas" EntityType="DemoxOyModel.asiakas" />
+        </EntityContainer>
+        <EntityType Name="asiakas">
+          <Key>
+            <PropertyRef Name="astunnus" />
+          </Key>
+          <Property Name="astunnus" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="asnimi" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="true" />
+          <Property Name="yhteyshlo" Type="String" MaxLength="32" Unicode="false" FixedLength="true" />
+          <Property Name="maa" Type="String" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="postinro" Type="String" MaxLength="5" Unicode="false" FixedLength="true" />
+          <Property Name="postitmp" Type="String" MaxLength="16" Unicode="false" FixedLength="true" />
+          <Property Name="ostot" Type="Double" />
+          <Property Name="asvuosi" Type="Int16" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DemoxOyModelStoreContainer" CdmEntityContainer="DemoxOyEntities">
+          <EntitySetMapping Name="asiakas">
+            <EntityTypeMapping TypeName="DemoxOyModel.asiakas">
+              <MappingFragment StoreEntitySet="asiakas">
+                <ScalarProperty Name="astunnus" ColumnName="astunnus" />
+                <ScalarProperty Name="asnimi" ColumnName="asnimi" />
+                <ScalarProperty Name="yhteyshlo" ColumnName="yhteyshlo" />
+                <ScalarProperty Name="maa" ColumnName="maa" />
+                <ScalarProperty Name="postinro" ColumnName="postinro" />
+                <ScalarProperty Name="postitmp" ColumnName="postitmp" />
+                <ScalarProperty Name="ostot" ColumnName="ostot" />
+                <ScalarProperty Name="asvuosi" ColumnName="asvuosi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

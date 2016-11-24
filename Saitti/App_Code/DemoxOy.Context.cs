@@ -11,10 +11,10 @@ using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 
-public partial class BookShopEntities : DbContext
+public partial class DemoxOyEntities : DbContext
 {
-    public BookShopEntities()
-        : base("name=BookShopEntities")
+    public DemoxOyEntities()
+        : base("name=DemoxOyEntities")
     {
     }
 
@@ -23,9 +23,5 @@ public partial class BookShopEntities : DbContext
         throw new UnintentionalCodeFirstException();
     }
 
-    public DbSet<Book> Books { get; set; }
-    public DbSet<Customer> Customers { get; set; }
-    public DbSet<Orderitem> Orderitems { get; set; }
-    public DbSet<Order> Orders { get; set; }
-    public DbSet<account> accounts { get; set; }
+    public DbSet<asiakas> asiakas { get; set; }
 }
